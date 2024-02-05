@@ -17,7 +17,7 @@ dependencyResolutionManagement {
 rootProject.name = "exercises"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-include(":app")
+
 include(":kotlin:classes")
 include(":kotlin:classes-solution")
 include(":kotlin:conditions")
@@ -28,3 +28,6 @@ include(":kotlin:loops")
 include(":kotlin:loops-solution")
 include(":kotlin:variables")
 include(":kotlin:variables-solution")
+include(":compose:basics")
+include(":compose:basics-solution")
+
