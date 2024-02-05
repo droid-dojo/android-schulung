@@ -2,9 +2,6 @@ package ninja.droiddojo.samples.functions.extensions
 
 
 fun main() {
-
-    //Task: Revisiting the fizz buzz, the code was changed to make use of extension functions.
-    //      These are not yet Implemented so you need to provide them
     repeat(100) { number ->
         println(
             when {

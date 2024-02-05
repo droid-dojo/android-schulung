@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -25,10 +26,15 @@
             <option value="$PROJECT_DIR$/build-logic/convention" />
             <option value="$PROJECT_DIR$/kotlin" />
             <option value="$PROJECT_DIR$/kotlin/classes" />
+            <option value="$PROJECT_DIR$/kotlin/classes-solution" />
             <option value="$PROJECT_DIR$/kotlin/conditions" />
+            <option value="$PROJECT_DIR$/kotlin/conditions-solution" />
             <option value="$PROJECT_DIR$/kotlin/functions" />
+            <option value="$PROJECT_DIR$/kotlin/functions-solution" />
             <option value="$PROJECT_DIR$/kotlin/loops" />
+            <option value="$PROJECT_DIR$/kotlin/loops-solution" />
             <option value="$PROJECT_DIR$/kotlin/variables" />
+            <option value="$PROJECT_DIR$/kotlin/variables-solution" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

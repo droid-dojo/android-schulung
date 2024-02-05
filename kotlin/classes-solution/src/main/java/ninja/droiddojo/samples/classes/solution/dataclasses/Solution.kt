@@ -1,4 +1,4 @@
-package ninja.droiddojo.samples.classes.dataclasses
+package ninja.droiddojo.samples.classes.solution.dataclasses
 
 
 data class Person(
