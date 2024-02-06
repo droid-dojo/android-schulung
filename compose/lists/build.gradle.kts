@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ninja.droiddojo.samples.compose.states"
+    namespace = "ninja.droiddojo.samples.compose.lists"
 }
 
 dependencies {

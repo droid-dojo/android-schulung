@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ninja.droiddojo.samples.compose.lists"
+    namespace = "ninja.droiddojo.samples.compose.navigation"
 }
 
 dependencies {
@@ -14,6 +14,7 @@ dependencies {
     implementation(libs.androidx.compose.material.iconsExtended)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.navigation.compose)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 }

@@ -34,5 +34,7 @@ include(":compose:states")
 include(":compose:states-solution")
 include(":compose:lists")
 include(":compose:lists-solution")
+include(":compose:navigation")
+include(":compose:navigation-solution")
 
 
