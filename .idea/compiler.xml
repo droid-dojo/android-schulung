@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11">
+      <module name="exercises.app" target="17" />
       <module name="My_Application.app" target="17" />
     </bytecodeTargetLevel>
   </component>

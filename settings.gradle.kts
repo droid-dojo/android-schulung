@@ -30,4 +30,9 @@ include(":kotlin:variables")
 include(":kotlin:variables-solution")
 include(":compose:basics")
 include(":compose:basics-solution")
+include(":compose:states")
+include(":compose:states-solution")
+include(":compose:lists")
+include(":compose:lists-solution")
+
 

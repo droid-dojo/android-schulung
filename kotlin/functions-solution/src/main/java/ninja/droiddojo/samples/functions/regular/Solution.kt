@@ -3,10 +3,14 @@ package ninja.droiddojo.samples.functions.regular
 fun main() {
 
     makePizza(tomatoSauce = true, cheese = true, ham = true, mushrooms = true, mozzarella = true)
+
+    makePizza(true)
+
+    makePizza(tomatoSauce = true, peperoni = true)
 }
 
 fun makePizza(
-    tomatoSauce: Boolean = false,
+    tomatoSauce: Boolean,
     cheese: Boolean = false,
     ham: Boolean = false,
     salami: Boolean = false,

@@ -1,11 +1,10 @@
-package ninja.droiddojo.samples.classes.sealed
+package ninja.droiddojo.samples.classes.solution.sealed
 
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.Cheese
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.Ingredient
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.Meat
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.Peperoni
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.TomatoSauce
-import ninja.droiddojo.samples.classes.solution.sealed.PizzaSize
 
 data class Pizza(
     val ingredients: List<Ingredient>,

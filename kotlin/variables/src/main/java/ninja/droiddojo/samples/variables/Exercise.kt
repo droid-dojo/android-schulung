@@ -2,12 +2,37 @@ package ninja.droiddojo.samples.variables
 
 
 fun main() {
-    //Task 1: Define a variable called "greeting" with the value "Hello World"
-    TODO("Implement the first Task")
 
-    //Task 2: define a variable "result" which initially is 0. Than assign the result of 1 + 1 to it.
-    TODO("Implement the second Task")
+    val a: Person = Man("Hans Peter", "Germany", 42)
 
-    //Task 3: Define a Variable "number" which should be a "Long" Type and have the value 1337
-    TODO("Implement the third Task")
+    val age = when (a) {
+        is Man -> a.age
+        is Woman -> a.age
+    }
+
+
 }
+
+sealed interface Person {
+    val name: String
+}
+
+//sealed class Person {
+//    abstract val name: String
+//}
+
+data class Man(
+    override val name: String,
+    val location: String,
+    val age: Int
+) : Person
+
+data class Woman(
+    override val name: String,
+    val location: String,
+    val age: Int,
+    val favoriteFruits: String
+) : Person
+
+
+

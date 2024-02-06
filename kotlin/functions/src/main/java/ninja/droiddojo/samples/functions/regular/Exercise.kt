@@ -8,6 +8,30 @@ fun main() {
     //          with just the ingredients needed using named arguments.
     //          Sample: makePizza(cheese = true, mozzarella = true, tomatoSauce = true)
 
+    makePizza(true, true, false, true, true, false, true)
+
+    makePizza(
+        tomatoSauce = true,
+        cheese = true,
+        ham = false,
+        salami = true,
+        mushrooms = true,
+        peperoni = false,
+        mozzarella = true,
+    )
+
+    makePizza(
+        tomatoSauce = true,
+        cheese = true,
+        salami = true,
+        mushrooms = true,
+        mozzarella = true,
+        ham = false,
+        peperoni = false,
+    )
+
+    makePizza(tomatoSauce = true, true, false, true, true, false, true)
+
 }
 
 fun makePizza(

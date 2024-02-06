@@ -1,6 +1,5 @@
 package ninja.droiddojo.samples.classes.solution.sealed
 
-import ninja.droiddojo.samples.classes.sealed.Pizza
 import ninja.droiddojo.samples.classes.solution.sealed.PizzaSize.Small
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.Cheese.Emmentaler
 import ninja.droiddojo.samples.classes.solution.sealed.ingredients.Cheese.Mozzarella
