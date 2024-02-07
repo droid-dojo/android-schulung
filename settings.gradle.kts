@@ -30,13 +30,16 @@ include(":kotlin:variables")
 include(":kotlin:variables-solution")
 include(":compose:basics")
 include(":compose:basics-solution")
-include(":compose:states")
-include(":compose:states-solution")
+include(":compose:image-loading")
+include(":compose:image-loading-solution")
 include(":compose:lists")
 include(":compose:lists-solution")
 include(":compose:navigation")
 include(":compose:navigation-solution")
 include(":compose:resources")
 include(":compose:resources-solution")
+include(":compose:states")
+include(":compose:states-solution")
+
 
 
