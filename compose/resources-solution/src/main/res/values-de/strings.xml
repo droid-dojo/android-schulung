@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_message">Herzlich Wilkommen!</string>
+    <string name="greeting">Wie geht es dir, %1$s?</string>
+    <string name="weather_message">Hey, %2$s wir haben %1$ses Wetter. Wie findest du das?</string>
+    <string name="weather_sunny">Sonnig</string>
+    <string name="weather_cloudy">Bewölkt</string>
+</resources>

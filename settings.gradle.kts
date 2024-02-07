@@ -36,5 +36,7 @@ include(":compose:lists")
 include(":compose:lists-solution")
 include(":compose:navigation")
 include(":compose:navigation-solution")
+include(":compose:resources")
+include(":compose:resources-solution")
 
 
