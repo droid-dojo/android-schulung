@@ -16,13 +16,14 @@ class HomeViewModel : ViewModel() {
     val state: State<HomeScreenUiState> = _state
 
     init {
-        viewModelScope.launch { loadData() }
+        //Task 1: Make the code compile again by ensuring that load data runs in a coroutine scope
+//        loadData()
     }
 
     private suspend fun loadData() {
         _state.value = HomeScreenUiState.Content(
-            posts = withContext(Dispatchers.IO) { DataClient.allPosts() }
+            //Task 2: Ensure that the data is loaded with the IO Context
+            posts = DataClient.allPosts()
         )
     }
-
 }

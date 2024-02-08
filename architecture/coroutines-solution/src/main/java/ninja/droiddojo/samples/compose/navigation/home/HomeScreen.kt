@@ -130,12 +130,6 @@ private fun LoadingPreview() {
 
 @Preview
 @Composable
-private fun ContentPreview() {
-    HomeScreen(uiState = HomeScreenUiState.Content(posts = DataClient.allPosts()))
-}
-
-@Preview
-@Composable
 private fun NoPostsPreview() {
     HomeScreen(uiState = HomeScreenUiState.Error.NoPosts)
 }
