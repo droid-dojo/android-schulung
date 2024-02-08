@@ -38,6 +38,8 @@ include(":compose:navigation")
 include(":compose:navigation-solution")
 include(":compose:resources")
 include(":compose:resources-solution")
+include(":compose:state-hoisting")
+include(":compose:state-hoisting-solution")
 include(":compose:states")
 include(":compose:states-solution")
 
