@@ -42,6 +42,8 @@ include(":compose:state-hoisting")
 include(":compose:state-hoisting-solution")
 include(":compose:states")
 include(":compose:states-solution")
+include(":architecture:viewmodels")
+include(":architecture:viewmodels-solution")
 
 
 
