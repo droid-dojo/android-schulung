@@ -46,6 +46,8 @@ include(":architecture:coroutines")
 include(":architecture:coroutines-solution")
 include(":architecture:viewmodels")
 include(":architecture:viewmodels-solution")
+include(":architecture:state-flow")
+include(":architecture:state-flow-solution")
 
 
 
