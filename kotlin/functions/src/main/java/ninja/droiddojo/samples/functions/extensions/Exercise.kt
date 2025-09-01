@@ -7,10 +7,6 @@ fun main() {
     //          if the number is matching a given condition.
     //Sample:   number.isFizzBuzz() -> "FizzBuzz"
 
-    val threeHanses = "Hans" * 1000
-
-    println(threeHanses)
-
     repeat(100) { number ->
         println(
             when {
@@ -22,17 +18,6 @@ fun main() {
         )
     }
 }
-
-operator fun String.times(other: Int) : String {
-    var string = ""
-
-    repeat(other) {
-        string = string + this
-    }
-
-    return string
-}
-
 fun Int.isFizz() : Boolean {
     return this % 3 == 0
 }
