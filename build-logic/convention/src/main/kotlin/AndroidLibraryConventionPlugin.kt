@@ -20,6 +20,7 @@ import ninja.droiddojo.samples.configureGradleManagedDevices
 import ninja.droiddojo.samples.configureKotlinAndroid
 import ninja.droiddojo.samples.configurePrintApksTask
 import ninja.droiddojo.samples.disableUnnecessaryAndroidTests
+import ninja.droiddojo.samples.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -36,7 +37,9 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
-                defaultConfig.targetSdk = 34
+                defaultConfig.targetSdk = 35
+                defaultConfig.testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+                testOptions.animationsDisabled = true
                 configureGradleManagedDevices(this)
                 // The resource prefix is derived from the module name,
                 // so resources inside ":core:module1" must be prefixed with "core_module1_"
@@ -49,7 +52,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 disableUnnecessaryAndroidTests(target)
             }
             dependencies {
-                add("testImplementation", kotlin("test"))
+                "implementation"(libs.findLibrary("androidx.tracing.ktx").get())
             }
         }
     }

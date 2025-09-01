@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     `kotlin-dsl`
+    alias(libs.plugins.android.lint)
 }
 
 group = "ninja.droiddojo.samples.buildlogic"
@@ -28,15 +29,17 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
-tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
     }
 }
 
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
+    compileOnly(libs.compose.gradlePlugin)
     compileOnly(libs.firebase.crashlytics.gradlePlugin)
     compileOnly(libs.firebase.performance.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
@@ -55,59 +58,47 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "samples.android.application.compose"
+            id = libs.plugins.samples.android.application.compose.get().pluginId
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "samples.android.application"
+            id = libs.plugins.samples.android.application.asProvider().get().pluginId
             implementationClass = "AndroidApplicationConventionPlugin"
         }
-        register("androidApplicationJacoco") {
-            id = "samples.android.application.jacoco"
-            implementationClass = "AndroidApplicationJacocoConventionPlugin"
-        }
         register("androidLibraryCompose") {
-            id = "samples.android.library.compose"
+            id = libs.plugins.samples.android.library.compose.get().pluginId
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = "samples.android.library"
+            id = libs.plugins.samples.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidFeature") {
-            id = "samples.android.feature"
+            id = libs.plugins.samples.android.feature.get().pluginId
             implementationClass = "AndroidFeatureConventionPlugin"
         }
-        register("androidLibraryJacoco") {
-            id = "samples.android.library.jacoco"
-            implementationClass = "AndroidLibraryJacocoConventionPlugin"
-        }
         register("androidTest") {
-            id = "samples.android.test"
+            id = libs.plugins.samples.android.test.get().pluginId
             implementationClass = "AndroidTestConventionPlugin"
         }
-        register("androidHilt") {
-            id = "samples.android.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
+        register("hilt") {
+            id = libs.plugins.samples.hilt.get().pluginId
+            implementationClass = "HiltConventionPlugin"
         }
         register("androidRoom") {
-            id = "samples.android.room"
+            id = libs.plugins.samples.android.room.get().pluginId
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("androidFirebase") {
-            id = "samples.android.application.firebase"
+            id = libs.plugins.samples.android.application.firebase.get().pluginId
             implementationClass = "AndroidApplicationFirebaseConventionPlugin"
         }
-        register("androidFlavors") {
-            id = "samples.android.application.flavors"
-            implementationClass = "AndroidApplicationFlavorsConventionPlugin"
-        }
         register("androidLint") {
-            id = "samples.android.lint"
+            id = libs.plugins.samples.android.lint.get().pluginId
             implementationClass = "AndroidLintConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "samples.jvm.library"
+            id = libs.plugins.samples.jvm.library.get().pluginId
             implementationClass = "JvmLibraryConventionPlugin"
         }
     }
