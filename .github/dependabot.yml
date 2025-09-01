@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "gradle"
     directory: "/"
     schedule:
-      interval: "hourly"
+      interval: "daily"
     registries: "*"
     labels: [ "version update" ]
     groups:
