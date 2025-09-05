@@ -1,0 +1,128 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "631a8588d034292dc87fa30592aa5e8c",
+    "entities": [
+      {
+        "tableName": "Characters",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `image` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "Episodes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `season` INTEGER NOT NULL, `episode` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "season",
+            "columnName": "season",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "episode",
+            "columnName": "episode",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "CharacterToEpisodeMapping",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `episodeId` INTEGER NOT NULL, PRIMARY KEY(`characterId`, `episodeId`), FOREIGN KEY(`characterId`) REFERENCES `Characters`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`episodeId`) REFERENCES `Episodes`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "episodeId",
+            "columnName": "episodeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId",
+            "episodeId"
+          ]
+        },
+        "foreignKeys": [
+          {
+            "table": "Characters",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "characterId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "Episodes",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "episodeId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '631a8588d034292dc87fa30592aa5e8c')"
+    ]
+  }
+}

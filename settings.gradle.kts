@@ -60,6 +60,7 @@ include(":architecture:coroutines")
 include(":architecture:coroutines-solution")
 include(":architecture:state-flow")
 include(":architecture:state-flow-solution")
+include(":apps:rick-and-morty")
 
 check(JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
     """

@@ -43,6 +43,7 @@ class HiltConventionPlugin : Plugin<Project> {
                 apply(plugin = "dagger.hilt.android.plugin")
                 dependencies {
                     "implementation"(libs.findLibrary("hilt.android").get())
+                    "ksp"(libs.findLibrary("hilt.ext.compiler").get())
                 }
             }
         }
